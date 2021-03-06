@@ -42,6 +42,22 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  
+  gem 'capistrano', '~> 3.16.0'
+
+  # rails specific capistrano functions
+  gem 'capistrano-rails', '~> 1.6.0'
+
+  # integrate bundler with capistrano
+  gem 'capistrano-bundler'
+
+  # if you are using Rbenv
+  gem 'capistrano-rbenv', "~> 2.2"
+
+  gem 'capistrano3-puma'
+
+  # include helper tasks
+  gem 'capistrano-cookbook', require: false, path: '../capistrano-cookbook'
 end
 
 group :test do
