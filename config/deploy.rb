@@ -5,7 +5,7 @@ set :application, 'rsra_rails6_example'
 set :deploy_user, 'deploy'
 
 # setup repo details
-set :repo_url, 'git@github.com:username/repo.git'
+set :repo_url, 'git@github.com:TalkingQuickly/rdra_rails6_example.git'
 
 # setup rbenv.
 set :rbenv_type, :system
