@@ -25,6 +25,7 @@ development:
   <<: *default
   database: rdra_rails6_example_development
   host: <%= ENV.fetch("DB_HOST") %>
+  port: <%= ENV.fetch("DB_PORT") %>
   password: <%= ENV.fetch("DB_PASSWORD") %>
   username: <%= ENV.fetch("DB_USERNAME") %>
 
@@ -62,6 +63,7 @@ test:
   <<: *default
   database: rdra_rails6_example_test
   host: <%= ENV.fetch("DB_HOST") %>
+  port: <%= ENV.fetch("DB_PORT") %>
   password: <%= ENV.fetch("DB_PASSWORD") %>
   username: <%= ENV.fetch("DB_USERNAME") %>
 
