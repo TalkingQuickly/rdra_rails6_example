@@ -1,4 +1,5 @@
 require_relative "boot"
+ sleep(10)
 
 require "rails/all"
 
