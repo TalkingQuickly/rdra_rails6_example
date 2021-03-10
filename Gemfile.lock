@@ -1,8 +1,9 @@
 PATH
   remote: ../capistrano-cookbook
   specs:
-    capistrano-cookbook (0.2.0)
-      capistrano (~> 3.2)
+    capistrano-cookbook (1.0.0)
+      capistrano (~> 3.16)
+      capistrano3-puma (~> 5.0.4)
 
 GEM
   remote: https://rubygems.org/
