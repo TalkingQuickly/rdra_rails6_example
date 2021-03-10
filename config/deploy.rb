@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
 
-set :application, 'rsra_rails6_example'
+set :application, 'rdra_rails6_example'
 set :deploy_user, 'deploy'
 
 # setup repo details
