@@ -39,7 +39,7 @@ require 'capistrano/puma'
 install_plugin Capistrano::Puma, load_hooks: false  # Default puma tasks
 install_plugin Capistrano::Puma::Nginx, load_hooks: false   # if you want to upload a nginx site template
 install_plugin Capistrano::Puma::Systemd, load_hooks: false # if you use SystemD 
-install_plugin Capistrano::Puma::Monit  # if you need the monit tasks
+install_plugin Capistrano::Puma::Monit, load_hooks: false  # if you need the monit tasks
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
