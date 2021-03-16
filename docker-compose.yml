@@ -30,6 +30,8 @@ services:
     command: redis-server --appendonly yes
     volumes:
       - redisdata:/data
+    ports:
+      - "6379:6379"
 
 volumes:
   postgresdata:

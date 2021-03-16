@@ -21,6 +21,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'sidekiq', '~> 6.2'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -44,19 +45,12 @@ group :development do
   gem 'spring'
   
   gem 'capistrano', '~> 3.16.0'
-
-  # rails specific capistrano functions
   gem 'capistrano-rails', '~> 1.6.0'
-
-  # integrate bundler with capistrano
-  gem 'capistrano-bundler'
-
-  # if you are using Rbenv
+  gem 'capistrano-bundler', '~> 2.0', '>= 2.0.1'
   gem 'capistrano-rbenv', "~> 2.2"
+  gem 'capistrano3-puma', '~> 5.0', '>= 5.0.4'
+  gem 'capistrano-sidekiq', '~> 2.0'
 
-  gem 'capistrano3-puma'
-
-  # include helper tasks
   gem 'capistrano-cookbook', require: false, path: '../capistrano-cookbook'
 end
 
