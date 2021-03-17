@@ -14,6 +14,7 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
 set :sidekiq_service_unit_user, :system # write unit files to /etc/systemd/system/
+set :sidekiq_user, fetch(:deploy_user)
 
 # setup puma to operate in clustered mode, required for zero downtime deploys
 set :puma_preload_app, false
