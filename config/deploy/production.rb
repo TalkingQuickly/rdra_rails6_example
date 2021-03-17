@@ -11,6 +11,10 @@ set :nginx_server_name, "rdr_rails6_example.staging.talkingquickly.co.uk"
 # at filepaths
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 
+# Name sidekiq systemd service after the app and stage name so that
+# multiple apps and stages can co-exist on the same machine if needed
+set :sidekiq_service_unit_name, "#{fetch(:full_app_name)}_sidekiq"
+
 server '65.21.54.211', user: 'deploy', roles: %w{web app db}, primary: true
 
 set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:full_app_name)}"
