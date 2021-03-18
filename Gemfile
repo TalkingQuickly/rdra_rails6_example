@@ -51,7 +51,7 @@ group :development do
   gem 'capistrano3-puma', '~> 5.0', '>= 5.0.4'
   gem 'capistrano-sidekiq', '~> 2.0'
 
-  gem 'capistrano-cookbook', require: false, path: '../capistrano-cookbook'
+  gem 'capistrano-cookbook', '~> 5.0', require: false
 end
 
 group :test do
