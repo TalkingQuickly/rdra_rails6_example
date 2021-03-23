@@ -14,17 +14,15 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
 
-# Setup sidekiq, make sure we run sidekiq as our deployment user, otherwise
-# it will default to root which a) is insecture and b) will lead to lots of
-# strange permissions issues
-set :sidekiq_service_unit_user, :system
-set :sidekiq_user, fetch(:deploy_user)
-
-
 # setup puma to operate in clustered mode, required for zero downtime deploys
 set :puma_preload_app, false
 set :puma_init_active_record, true
 set :puma_workers, 3
+set :puma_systemctl_user, fetch(:deploy_user)
+set :puma_enable_lingering, true
+
+set :sidekiq_systemctl_user, fetch(:deploy_user)
+set :sidekiq_enable_lingering, true
 
 # how many old releases do we want to keep, not much
 set :keep_releases, 5
