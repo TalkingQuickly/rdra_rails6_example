@@ -16,6 +16,7 @@ set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 # multiple apps and stages can co-exist on the same machine if needed
 set :sidekiq_service_unit_name, "sidekiq_#{fetch(:full_app_name)}"
 
+
 server '65.21.54.211', user: 'deploy', roles: %w{web app db}, primary: true
 
 set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:full_app_name)}"
