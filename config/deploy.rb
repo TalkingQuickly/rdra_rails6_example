@@ -13,6 +13,12 @@ set :rbenv_ruby, '3.0.0'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
+# setup certbot for SSL via letsencrypt
+set :certbot_enable_ssl, true
+set :certbot_redirect_to_https, true
+set :certbot_email, "ben@talkingquickly.co.uk"
+set :certbot_use_acme_staging, false
+
 # setup puma to operate in clustered mode, required for zero downtime deploys
 set :puma_preload_app, false
 set :puma_init_active_record, true
